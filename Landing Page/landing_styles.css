@@ -11,7 +11,7 @@
     width: 100%;
     background-image: url(images/EXEAT\ Landing\ Page.png);
     background-position: center;
-    background-size: cover;
+    object-fit: cover;
     position: relative;
 }
 .ky-logo{
@@ -111,7 +111,6 @@
     justify-content: left;
     background-color: rgb(237, 237, 237);
     color: grey;
-    padding-right: 15px;
     border-radius: 0 10px 10px 10px;
 }
 #acc-type-select{
@@ -121,6 +120,8 @@
     background-color: rgb(237, 237, 237);
     font-size: 14px;
     font-weight: 500;
+    padding-right: 15px;
+    border-radius: 0 10px 10px 10px;
 }
 .sign-up-btn{
     border: none;
