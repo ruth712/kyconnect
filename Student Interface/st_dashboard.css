@@ -5,9 +5,7 @@
     padding: 0;
     font-family: Poppins;
 }
-body{
-    height: 5000px;
-}
+
 
 /* Sidebar */
 aside {
@@ -148,20 +146,111 @@ header{
     height: 10rem;
     padding: 2rem;
     margin: 3rem 0 1.5rem 0;
-    box-shadow: 0 0 8px black inset;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) inset;
     border-radius: 10px;
+    overflow: hidden;
 }
 .card-top-left{
-    background-color: lightblue;
+    background-color: rgb(27, 93, 227);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.card-top-right{
-    background-color: lightpink;
+.total-outing{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0.3rem;
+    place-items: center;
 }
+.total-outing h1{
+    font-size: 16px;
+    font-weight: 600;
+}
+.total-outing p{
+    font-size: 30px;
+}
+.total-outing a{
+    text-decoration: none;
+    color: black;
+    background-color: whitesmoke;
+    padding: 0.2rem 7rem;
+    border-radius: 20px;
+}
+.total-outing a:hover{
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.5) inset;
+}
+.total-outing a:active{
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.8) inset;
+}
+.ctr-top, .ctr-bot{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+.ctr-top{
+    background-color: rgb(26, 188, 120);
+    border-radius: 10px 10px 0 0;
+}
+.ctr-bot{
+    background-color: rgb(228, 228, 228);
+    color: black;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* Bottom Card */
 .card-bot{
-    background-color: lightyellow;
     width: 80%;
     padding: 2rem;
-    box-shadow: 0 0 8px black inset;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) inset;
     border-radius: 10px;
     height: 15rem;
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+}
+.card-bot-wrap{
+    position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    height: 15rem;
+    overflow: hidden;
+}
+.card-bot-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 72, 191);
+    border-radius: 10px 10px 0 0;
+    height: 2rem;
+}
+/* Application Guideline Box */
+.app-guideline{
+    border-radius: 0 0 10px 10px;
+    height: 13rem;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    padding: 0 40px 0 10px;
+    overflow: hidden;
+}
+.guideline-num{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+.guideline-num p{
+    color: black;
+}
+.guideline-content{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    justify-content: left;
+    padding-left: 10px;
+}
+.guideline-content p{
+    color: black;
 }
