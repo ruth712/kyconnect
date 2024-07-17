@@ -270,3 +270,9 @@ header{
     width: 240px;
     font-weight: 600;
 }
+.save-changes-btn:hover{
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.315);
+}
+.save-changes-btn:active{
+    box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.315) inset;
+}
