@@ -132,7 +132,7 @@ header{
     flex-direction: column;
     align-items: center;
     justify-content: top;
-    top: 3rem;
+    top: 6rem;
     left: 12rem;
     right: 0;
     bottom: 0;
@@ -145,7 +145,7 @@ header{
     width: 80%;
     height: 10rem;
     padding: 2rem;
-    margin: 3rem 0 1.5rem 0;
+    margin: 0 0 1.5rem 0;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5) inset;
     border-radius: 10px;
     overflow: hidden;
