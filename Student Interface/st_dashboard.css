@@ -7,6 +7,93 @@
 }
 
 
+/* Log Out Overlay */
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
+.logout-card{
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    background-color: white;
+    color: black;
+    width: 480px;
+    height: 280px;
+    max-width: 80%;
+    padding: 20px;
+    border: none;
+    border-radius: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+}
+.logout-card.active{
+    transform: translate(-50%, -50%) scale(1);  
+}
+.logout-card h1, .logout-card p{
+    width: 400px;
+    max-width: 80%;
+    color: black;
+}
+.logout-card h1{
+    font-size: 30px;
+}
+.button-wrapper{
+    width: 215px;
+    display: flex;
+    justify-content: space-between;
+}
+.button-wrapper button{
+    width: 6.2rem;
+    padding: 0.4rem 0;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.yes-btn{
+    border: none;
+    background-color: rgb(26, 188, 120);
+    color: white;
+    transition: opacity 0.15s;
+}
+.yes-btn:hover{
+    opacity: 0.9;
+}
+.yes-btn:active{
+    opacity: 0.7;
+}
+.no-btn{
+    border: 1px rgb(229, 25, 25) solid;
+    color: rgb(229, 25, 25);
+    background-color: white;
+    transition: background-color 0.15s;
+}
+.no-btn:hover{
+    color: white;
+    background-color: rgb(229, 25, 25);
+}
+.no-btn:active{
+    background-color: rgba(229, 25, 25, 0.7);
+}
+
 /* Sidebar */
 aside {
     z-index: 100;
@@ -19,7 +106,7 @@ aside {
     width: 12rem;
     background-color: rgb(10, 10, 10);
 }
-.side a,div,p{
+.side a,div,p,.logout-btn{
     font-size: 14px;
     font-weight: 600;
     color: white;
@@ -59,7 +146,7 @@ aside {
     justify-content: center;
     place-items: center;
 }
-.btn-container a{
+.btn-container a, .logout-btn{
     text-decoration: none;
     background-color: rgb(30, 30, 30);
     display: flex;
@@ -71,11 +158,15 @@ aside {
     border-radius: 4px;
     box-shadow: 2px 2px 7px black inset;
     transition: background-color 0.15s;
+    border: none;
 }
-.btn-container a:hover{
+.logout-btn{
+    box-sizing: content-box;
+}
+.btn-container a:hover, .logout-btn:hover{
     background-color: rgba(30, 30, 30, 0.5);
 }
-.btn-container a:active{
+.btn-container a:active, .logout-btn:active{
     background-color: rgba(30, 30, 30, 0.2);
 }
 
